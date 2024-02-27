@@ -3,9 +3,6 @@ import subprocess
 from datetime import datetime
 
 
-# Dagsetningarformat
-nuna = datetime.now().strftime(f'%Y %B %d, %H:%M')
-
 # Desktop slóð, virkar á hvaða Windows tölvu sem er
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
@@ -26,7 +23,7 @@ def opna_glos():
 def glosari():
     glosun = input("Til glósunar: ")
     with open(glos_path, 'a', encoding='utf-8') as f:
-        f.write(f"{nuna} - {glosun}\n\n")
+        f.write(f"{datetime.now().strftime(f'%Y %B %d, %H:%M')} - {glosun}\n\n")
     print("Glósað!")
 
 
