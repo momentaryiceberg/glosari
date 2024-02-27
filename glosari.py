@@ -18,15 +18,15 @@ glos_path = os.path.join(desktop, filenafn)
 
 # Opnar fælinn. Býr hann til ef ekki til.
 def opna_glos():
-    # with open(glos_path, 'a', encoding='utf-8') as f:
-    #     pass
+    with open(glos_path, 'a', encoding='utf-8') as f:
+        pass
     subprocess.run(['start', glos_path], shell=True)
 
 # Hinn raunverulegi glósari :)
 def glosari():
     glosun = input("Til glósunar: ")
     with open(glos_path, 'a', encoding='utf-8') as f:
-        f.write(f"{nuna} - {glosun}")
+        f.write(f"{nuna} - {glosun}\n\n")
     print("Glósað!")
 
 
