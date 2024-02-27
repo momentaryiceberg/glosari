@@ -2,8 +2,9 @@ import os
 import subprocess
 from datetime import datetime
 
+
 # Dagsetningarformat
-nuna = datetime.now().strftime('%Y %b %d, %H:%M')
+nuna = datetime.now().strftime(f'%Y %B %d, %H:%M')
 
 # Desktop slóð, virkar á hvaða Windows tölvu sem er
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
@@ -17,9 +18,9 @@ glos_path = os.path.join(desktop, filenafn)
 
 # Opnar fælinn. Býr hann til ef ekki til.
 def opna_glos():
-    with open(glos_path, 'a', encoding='utf-8') as f:
-        pass
-    subprocess.run(['python', glos_path])
+    # with open(glos_path, 'a', encoding='utf-8') as f:
+    #     pass
+    subprocess.run(['start', glos_path], shell=True)
 
 # Hinn raunverulegi glósari :)
 def glosari():
