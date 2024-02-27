@@ -38,10 +38,10 @@ def main():
         if user_input.lower() == 'q':
             print("Hættir...")
             break
-        elif user_input.lower() == 'g':
-            glosari()
         elif user_input.lower() == 's':
             opna_glos()
+        elif user_input.lower() == 'g':
+            glosari()
         else:
             print(f"'{user_input}' virkar ekki. Veldu aftur.")
 
