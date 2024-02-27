@@ -3,7 +3,7 @@ import subprocess
 from datetime import datetime
 
 # Dagsetningarformat
-nuna = datetime.now().strftime('%Y %B %d, %H:%M')
+nuna = datetime.now().strftime('%Y %b %d, %H:%M')
 
 # Desktop slóð, virkar á hvaða Windows tölvu sem er
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
